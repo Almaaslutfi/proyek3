@@ -10,11 +10,9 @@
                     <li class="breadcrumb-item active" aria-current="page">User</li>
                 </ol>
             </nav>
-
             <p class="lead">
                 <h1>Halaman User</h1>
             </p>
-
         </div>
 
     </div>
