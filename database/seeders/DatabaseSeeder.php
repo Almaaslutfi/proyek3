@@ -3,9 +3,6 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Faker;
-use DB;
-use Str;
 
 class DatabaseSeeder extends Seeder
 {
