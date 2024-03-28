@@ -1,8 +1,8 @@
 <?php
 namespace Database\Seeders;
 use Faker;
-use DB;
-use Str;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 use Illuminate\Database\Seeder;
 
 class UsersTableSeeder extends Seeder
