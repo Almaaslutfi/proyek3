@@ -11,10 +11,6 @@
                         <div class="col-md-12 mb-3">
                             <div class="h-100">
                                 <div class="card-body">
-                
-                                    {{-- <h5 class="card-title">Block styled form</h5> --}}
-                
-                                    <!-- Block styled form -->
                                     <form class="row g-3 justify-content-center" id="form-tambah" method="post" action="{{route('permission-tambah')}}">
                                         @csrf
                                         <div class="col-md-12">
@@ -31,8 +27,6 @@
                                             <input id="_dm-inputFname" type="text" placeholder="Nama" required name="nama" class="form-control">
                                         </div>
                                     </form>
-                                    <!-- END : Block styled form -->
-                
                                 </div>
                                 <div class="d-flex justify-content-end p-3">
                                     <div>

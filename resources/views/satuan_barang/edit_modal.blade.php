@@ -11,10 +11,6 @@
                         <div class="col-md-12 mb-3">
                             <div class="h-100">
                                 <div class="card-body">
-                
-                                    {{-- <h5 class="card-title">Block styled form</h5> --}}
-                
-                                    <!-- Block styled form -->
                                     <form class="row g-3 justify-content-center"id="satuan-form" method="post">
                                         @csrf
                                         @method('put')
@@ -22,7 +18,6 @@
                                             <label for="_dm-inputFname" class="form-label">Kode Kategori</label>
                                             <input id="kode_nama" type="text" disabled required value="{{ $kode }}" class="form-control">
                                         </div>
-                
                                         <div class="col-md-12">
                                             <label for="_dm-inputLname" class="form-label">Nama</label>
                                             <input id="nama" type="text" name="nama" required placeholder="Nama" class="form-control">
@@ -32,8 +27,6 @@
                                             <input id="status" type="text" name="status" required placeholder="Status" class="form-control">
                                         </div> --}}
                                     </form>
-                                    <!-- END : Block styled form -->
-                
                                 </div>
                                 <div class="d-flex justify-content-end p-3">
                                     <div>

@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -42,7 +43,7 @@ Route::group(['middleware' => ['auth']], function () {
         });
     // });
     Route::get('/', function () {
-        return view('welcome');
+        return view('home');
     });
     Route::prefix('satuan')->group(function () {
         Route::get('/', [App\Http\Controllers\Produk\SatuanController::class, 'index'])->name('satuan-index');

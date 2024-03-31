@@ -11,17 +11,13 @@
                         <div class="col-md-12 mb-3">
                             <div class="h-100">
                                 <div class="card-body">
-                
-                                    {{-- <h5 class="card-title">Block styled form</h5> --}}
-                
-                                    <!-- Block styled form -->
                                     <form class="row g-3 justify-content-center"id="edit-form" method="post">
                                         @csrf
                                         @method('patch')
                                         <div class="col-md-12 justify-content-center d-flex">
                                             <div class="row col-md-6">
                                                 <img type="image/*" src="{{url('assets/img/profile-photos/1.png')}}" alt="foto" id="foto" class="rounded-circle" style="max-width: none">
-                                                {{-- <button type="button" class="btn btn-primary my-3" id="foto">Ubah Foto</button> --}}
+                                             {{-- <button type="button" class="btn btn-primary my-3" id="foto">Ubah Foto</button> --}}
                                                 <div id="input-img" class="text-break"></div>
                                                 <label for="formFile" class="btn btn-primary my-3">Ubah Foto</label>
                                                 <input class="d-none" type="file" id="formFile">
@@ -65,13 +61,7 @@
                                             <label for="_dm-inputConfirmPass" class="form-label">Konfirmasi Password</label>
                                             <input id="_dm-inputConfirmPass" type="password" required name="password_confirmation" class="form-control" placeholder="">
                                         </div>
-                
-                                        {{-- <div class="col-12 row justify-content-center p-2 my-3">
-                                            <button type="submit" class="btn btn-primary">Buat Akun</button>
-                                        </div> --}}
-                                    </form>
-                                    <!-- END : Block styled form -->
-                
+                                    </form>          
                                 </div>
                                 <div class="d-flex justify-content-end p-3">
                                     <div>
