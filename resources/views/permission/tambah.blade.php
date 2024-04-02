@@ -31,7 +31,7 @@
                                 <div class="d-flex justify-content-end p-3">
                                     <div>
                                         <button type="reset" onclick="reset_tambah()" class="btn btn-danger">Reset</button>
-                                        <button type="submit" onclick="submit_tambah()" class="btn btn-primary">Save changes</button>
+                                        <button type="submit" onclick="submit_tambah()" class="btn btn-primary">Tambah</button>
                                     </div>
                                   </div>
                             </div>

@@ -35,14 +35,14 @@
                                         </div>
                                         <div class="col-12">
                                             <label for="_dm-inputConfirmPass" class="form-label">Konfirmasi Password</label>
-                                            <input id="_dm-inputConfirmPass" type="password" required name="password_confirmation" class="form-control" placeholder="">
+                                            <input id="_dm-inputConfirmPass" type="password" required name="password_confirmation" class="form-control" placeholder="*****">
                                         </div>
                                     </form>
                                 </div>
                                 <div class="d-flex justify-content-end p-3">
                                     <div>
-                                        <button type="reset" onclick="reset_tambah()" class="btn btn-danger">Reset</button>
-                                        <button type="submit" onclick="submit_tambah()" class="btn btn-primary">Save changes</button>
+                                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Batal</button>
+                                        <button type="submit" onclick="submit_tambah()" class="btn btn-primary">Tambah</button>
                                     </div>
                                   </div>
                             </div>

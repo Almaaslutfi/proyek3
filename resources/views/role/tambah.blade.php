@@ -36,7 +36,7 @@
                                 <div class="d-flex justify-content-end p-3">
                                     <div>
                                         <button type="button" onclick="resetFormTambah()" class="btn btn-danger">Reset</button>
-                                        <button type="button" id="simpan" class="btn btn-primary">Save changes</button>
+                                        <button type="button" id="simpan" class="btn btn-primary">Tambah</button>
                                     </div>
                                 </div>
                             </div>
@@ -57,7 +57,6 @@
         document.getElementById("role-form-tambah").submit();
     }
     // let id_permission = "";
-    
 
     $('#simpan').click(function() {
         // let data = $(this).data("data")
@@ -101,8 +100,6 @@
         // $("#role").val(data.name)
         // let permission = data.permissions;
         // console.log(permission);
-        
-
         
         // permission.forEach(element => {
         //     $("#permission"+element.id).attr("checked", true);

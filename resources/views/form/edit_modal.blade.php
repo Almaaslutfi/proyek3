@@ -66,7 +66,7 @@
                                 <div class="d-flex justify-content-end p-3">
                                     <div>
                                         <button type="button" onclick="resetForm()" class="btn btn-danger">Reset</button>
-                                        <button type="submit" onclick="submitForm()" class="btn btn-primary">Save changes</button>
+                                        <button type="submit" onclick="submitForm()" class="btn btn-primary">Simpan</button>
                                     </div>
                                 </div>
                             </div>
