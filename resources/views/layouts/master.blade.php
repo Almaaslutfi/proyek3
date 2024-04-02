@@ -5,750 +5,166 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
     <meta name="description" content="Nifty is a responsive admin dashboard template based on Bootstrap 5 framework. There are a lot of useful components.">
-    <title>Dashboard 1 | Nifty - Admin Template</title>
-
+    <title>Dashboard Nifty </title>
     <!-- STYLESHEETS -->
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~--- -->
-
     <!-- Fonts [ OPTIONAL ] -->
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&amp;family=Ubuntu:wght@400;500;700&amp;display=swap" rel="stylesheet">
-
     <!-- Bootstrap CSS [ REQUIRED ] -->
-    <link rel="stylesheet" href="{{url('assets/css/bootstrap.min.75a07e3a3100a6fed983b15ad1b297c127a8c2335854b0efc3363731475cbed6.css')}}">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.75a07e3a3100a6fed983b15ad1b297c127a8c2335854b0efc3363731475cbed6.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
     <!-- Nifty CSS [ REQUIRED ] -->
-    <link rel="stylesheet" href="{{url('assets/css/nifty.min.4d1ebee0c2ac4ed3c2df72b5178fb60181cfff43375388fee0f4af67ecf44050.css')}}">
+    <link rel="stylesheet" href="assets/css/nifty.min.4d1ebee0c2ac4ed3c2df72b5178fb60181cfff43375388fee0f4af67ecf44050.css">
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 </head>
 
 <body class="jumping">
-
     <!-- PAGE CONTAINER -->
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
     <div id="root" class="root mn--max hd--expanded">
-
         <!-- CONTENTS -->
         <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-        @yield('content')
-
+        <section id="content" class="content">
+@yield('content')
+            <!-- FOOTER -->
+            <footer class="content__boxed mt-auto">
+                <div class="content__wrap py-3 py-md-1 d-flex flex-column flex-md-row align-items-md-center">
+                    <div class="text-nowrap mb-4 mb-md-0">Copyright &copy; 2024 <a href="#" class="ms-1 btn-link fw-bold">PT Basawa Solusi Teknologi</a></div>
+                    <nav class="nav flex-column gap-1 flex-md-row gap-md-3 ms-md-auto" style="row-gap: 0 !important;">
+                        <a class="nav-link px-0" href="#">Policy Privacy</a>
+                        <a class="nav-link px-0" href="#">Terms and conditions</a>
+                        <a class="nav-link px-0" href="#">Contact Us</a>
+                    </nav>
+                </div>
+            </footer>
+            <!-- END - FOOTER -->
+        </section>
         <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
         <!-- END - CONTENTS -->
+        <!-- HEADER -->
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <header class="header">
+            <div class="header__inner">
+                <!-- Brand -->
+                <div class="header__brand">
+                    <div class="brand-wrap">
+                        <!-- Brand logo -->
+                        <a href="index.html" class="brand-img stretched-link">
+                            <img src="assets/img/logo.svg" alt="Nifty Logo" class="Nifty logo" width="40" height="40">
+                        </a>
+                        <!-- Brand title -->
+                        <div class="brand-title">Nifty</div>
+                        <!-- You can also use IMG or SVG instead of a text element. -->
+                    </div>
+                </div>
+                <!-- End - Brand -->
+                <div class="header__content">
+                    <!-- Content Header - Left Side: -->
+                    <div class="header__content-start">
+                        <!-- Navigation Toggler -->
+                        <button type="button" class="nav-toggler header__btn btn btn-icon btn-sm" aria-label="Nav Toggler">
+                            <i class="demo-psi-view-list"></i>
+                        </button>
+                           </div>
+                    <!-- End - Content Header - Left Side -->
+                    <!-- Content Header - Right Side: -->
+                    <div class="header__content-end">
+                         <!-- User dropdown -->
+                        <div class="dropdown">
+                            <!-- Toggler -->
+                            <button class="header__btn btn btn-icon btn-sm" type="button" data-bs-toggle="dropdown" aria-label="User dropdown" aria-expanded="false">
+                                <i class="demo-psi-bell "></i>
+                            </button>
+                            <!-- User dropdown menu -->
+                            <div class="dropdown-menu dropdown-menu-end w-md-300px">
+                                <!-- User dropdown header -->
+                                <div class="border-bottom px-3 py-2 mb-3">
+                                    <h5>Notifikasi</h5>
+                                </div>
+                                <div class="list-group list-group-borderless" data-bs-spy = "scroll" data-bs-target="#data_notif">
+                                    <div id="data_notif" class="list-group-borderless" style="overflow-y: scroll;height: 200px">
+                                        <div class="text-center">
+                                          <h4>Belum ada notifikasi!</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                        <!-- End - User dropdown -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- END - HEADER -->
+        <!-- MAIN NAVIGATION -->
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <nav id="mainnav-container" class="mainnav">
+            <div class="mainnav__inner">
+                <!-- Navigation menu -->
+                <div class="mainnav__top-content scrollable-content pb-5">
+                    <!-- Profile Widget -->
+                    <div class="mainnav__profile mt-3 d-flex3">
+                        <div class="mt-2 d-mn-max"></div>
+                        <!-- Profile picture  -->
+                        <div class="mininav-toggle text-center py-2">
+                            <img class="mainnav__avatar img-md rounded-circle border" src="assets/img/profile-photos/1.png" alt="Profile Picture">
+                        </div>
 
-        @include('layouts.navigation')
-
+                        <div class="mininav-content collapse d-mn-max">
+                            <div class="d-grid">
+                                <!-- User name and position -->
+                                <button class="d-block btn shadow-none p-2" data-bs-toggle="collapse" data-bs-target="#usernav" aria-expanded="false" aria-controls="usernav">
+                                    <span class="d-flex justify-content-center align-items-center">
+                                        <h6 class="mb-0 me-3"> {{ Auth::user()->first_name}} </h6>
+                                    </span>
+                                    <small class="text-muted">{{ Auth::user()->username }}</small>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End - Profile widget -->
+            @include('layouts.navigation')
+                </div>
+                <!-- End - Navigation menu -->
+                <!-- Bottom navigation menu -->
+                <div class="mainnav__bottom-content border-top pb-2">
+                    <ul id="mainnav" class="mainnav__menu nav flex-column">
+                        <li class="nav-item has-sub">
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                            <a href="{{ route('login') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="nav-link mininav-toggle collapsed" aria-expanded="false">
+                                <i class="demo-pli-unlock fs-5 me-2"></i>
+                                <span class="nav-label ms-1">Logout</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- End - Bottom navigation menu -->
+            </div>
+        </nav>
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- END - MAIN NAVIGATION -->
     </div>
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
     <!-- END - PAGE CONTAINER -->
-
     <!-- SCROLL TO TOP BUTTON -->
     <div class="scroll-container">
         <a href="#root" class="scroll-page rounded-circle ratio ratio-1x1" aria-label="Scroll button"></a>
     </div>
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
     <!-- END - SCROLL TO TOP BUTTON -->
-
-    <!-- BOXED LAYOUT : BACKGROUND IMAGES CONTENT [ DEMO ] -->
-    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-    <div id="_dm-boxedBgContent" class="_dm-boxbg offcanvas offcanvas-bottom" data-bs-backdrop="false" data-bs-scroll="true" tabindex="-1">
-        <div class="offcanvas-body p-4">
-
-            <!-- Content Header -->
-            <div class="offcanvas-header border-bottom p-0 pb-3">
-                <div>
-                    <h4 class="offcanvas-title">Background Images</h4>
-                    <span class="text-muted">Add an image to replace the solid background color</span>
-                </div>
-                <button type="button" class="btn-close btn-lg text-reset shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <!-- End - Content header -->
-
-            <!-- Collection Of Images -->
-            <div id="_dm-boxedBgContainer" class="row mt-3">
-
-                <!-- Blurred Background Images -->
-                <div class="col-lg-4">
-                    <h5 class="mb-4">Blurred</h5>
-                    <div class="_dm-boxbg__img-container d-flex flex-wrap">
-                        <a href="#" class="_dm-boxbg__thumb ratio ratio-16x9">
-                            <img class="img-responsive" src="{{('assets/premium/boxed-bg/blurred/thumbs/1.jpg')}}" alt="Background Image" loading="lazy">
-                        </a>
-                        <a href="#" class="_dm-boxbg__thumb ratio ratio-16x9">
-                            <img class="img-responsive" src="{{('assets/premium/boxed-bg/blurred/thumbs/2.jpg')}}" alt="Background Image" loading="lazy">
-                        </a>
-                        <a href="#" class="_dm-boxbg__thumb ratio ratio-16x9">
-                            <img class="img-responsive" src="{{('assets/premium/boxed-bg/blurred/thumbs/3.jpg')}}" alt="Background Image" loading="lazy">
-                        </a>
-                        <a href="#" class="_dm-boxbg__thumb ratio ratio-16x9">
-                            <img class="img-responsive" src="{{('assets/premium/boxed-bg/blurred/thumbs/4.jpg')}}" alt="Background Image" loading="lazy">
-                        </a>
-                        <a href="#" class="_dm-boxbg__thumb ratio ratio-16x9">
-                            <img class="img-responsive" src="{{('assets/premium/boxed-bg/blurred/thumbs/5.jpg')}}" alt="Background Image" loading="lazy">
-                        </a>
-                        <a href="#" class="_dm-boxbg__thumb ratio ratio-16x9">
-                            <img class="img-responsive" src="{{('assets/premium/boxed-bg/blurred/thumbs/6.jpg')}}" alt="Background Image" loading="lazy">
-                        </a>
-                        <a href="#" class="_dm-boxbg__thumb ratio ratio-16x9">
-                            <img class="img-responsive" src="{{('assets/premium/boxed-bg/blurred/thumbs/7.jpg')}}" alt="Background Image" loading="lazy">
-                        </a>
-                        <a href="#" class="_dm-boxbg__thumb ratio ratio-16x9">
-                            <img class="img-responsive" src="{{('assets/premium/boxed-bg/blurred/thumbs/8.jpg')}}" alt="Background Image" loading="lazy">
-                        </a>
-                        <a href="#" class="_dm-boxbg__thumb ratio ratio-16x9">
-                            <img class="img-responsive" src="{{('assets/premium/boxed-bg/blurred/thumbs/9.jpg')}}" alt="Background Image" loading="lazy">
-                        </a>
-                        <a href="#" class="_dm-boxbg__thumb ratio ratio-16x9">
-                            <img class="img-responsive" src="{{('assets/premium/boxed-bg/blurred/thumbs/10.jpg')}}" alt="Background Image" loading="lazy">
-                        </a>
-                        <a href="#" class="_dm-boxbg__thumb ratio ratio-16x9">
-                            <img class="img-responsive" src="{{('assets/premium/boxed-bg/blurred/thumbs/11.jpg')}}" alt="Background Image" loading="lazy">
-                        </a>
-                        <a href="#" class="_dm-boxbg__thumb ratio ratio-16x9">
-                            <img class="img-responsive" src="{{('assets/premium/boxed-bg/blurred/thumbs/12.jpg')}}" alt="Background Image" loading="lazy">
-                        </a>
-                        <a href="#" class="_dm-boxbg__thumb ratio ratio-16x9">
-                            <img class="img-responsive" src="{{('assets/premium/boxed-bg/blurred/thumbs/13.jpg')}}" alt="Background Image" loading="lazy">
-                        </a>
-                        <a href="#" class="_dm-boxbg__thumb ratio ratio-16x9">
-                            <img class="img-responsive" src="{{('assets/premium/boxed-bg/blurred/thumbs/14.jpg')}}" alt="Background Image" loading="lazy">
-                        </a>
-                        <a href="#" class="_dm-boxbg__thumb ratio ratio-16x9">
-                            <img class="img-responsive" src="{{('assets/premium/boxed-bg/blurred/thumbs/15.jpg')}}" alt="Background Image" loading="lazy">
-                        </a>
-                        <a href="#" class="_dm-boxbg__thumb ratio ratio-16x9">
-                            <img class="img-responsive" src="{{('assets/premium/boxed-bg/blurred/thumbs/16.jpg')}}" alt="Background Image" loading="lazy">
-                        </a>
-                    </div>
-                </div>
-                <!-- End - Blurred Background Images -->
-
-                <!-- Polygon Background Images -->
-                <div class="col-lg-4">
-                    <h5 class="mb-4">Polygon &amp; Geometric</h5>
-                    <div class="_dm-boxbg__img-container d-flex flex-wrap">
-                        <a href="#" class="_dm-boxbg__thumb ratio ratio-16x9">
-                            <img class="img-responsive" src="assets/premium/boxed-bg/polygon/thumbs/1.jpg" alt="Background Image" loading="lazy">
-                        </a>
-                        <a href="#" class="_dm-boxbg__thumb ratio ratio-16x9">
-                            <img class="img-responsive" src="assets/premium/boxed-bg/polygon/thumbs/2.jpg" alt="Background Image" loading="lazy">
-                        </a>
-                        <a href="#" class="_dm-boxbg__thumb ratio ratio-16x9">
-                            <img class="img-responsive" src="assets/premium/boxed-bg/polygon/thumbs/3.jpg" alt="Background Image" loading="lazy">
-                        </a>
-                        <a href="#" class="_dm-boxbg__thumb ratio ratio-16x9">
-                            <img class="img-responsive" src="assets/premium/boxed-bg/polygon/thumbs/4.jpg" alt="Background Image" loading="lazy">
-                        </a>
-                        <a href="#" class="_dm-boxbg__thumb ratio ratio-16x9">
-                            <img class="img-responsive" src="assets/premium/boxed-bg/polygon/thumbs/5.jpg" alt="Background Image" loading="lazy">
-                        </a>
-                        <a href="#" class="_dm-boxbg__thumb ratio ratio-16x9">
-                            <img class="img-responsive" src="assets/premium/boxed-bg/polygon/thumbs/6.jpg" alt="Background Image" loading="lazy">
-                        </a>
-                        <a href="#" class="_dm-boxbg__thumb ratio ratio-16x9">
-                            <img class="img-responsive" src="assets/premium/boxed-bg/polygon/thumbs/7.jpg" alt="Background Image" loading="lazy">
-                        </a>
-                        <a href="#" class="_dm-boxbg__thumb ratio ratio-16x9">
-                            <img class="img-responsive" src="assets/premium/boxed-bg/polygon/thumbs/8.jpg" alt="Background Image" loading="lazy">
-                        </a>
-                        <a href="#" class="_dm-boxbg__thumb ratio ratio-16x9">
-                            <img class="img-responsive" src="assets/premium/boxed-bg/polygon/thumbs/9.jpg" alt="Background Image" loading="lazy">
-                        </a>
-                        <a href="#" class="_dm-boxbg__thumb ratio ratio-16x9">
-                            <img class="img-responsive" src="assets/premium/boxed-bg/polygon/thumbs/10.jpg" alt="Background Image" loading="lazy">
-                        </a>
-                        <a href="#" class="_dm-boxbg__thumb ratio ratio-16x9">
-                            <img class="img-responsive" src="assets/premium/boxed-bg/polygon/thumbs/11.jpg" alt="Background Image" loading="lazy">
-                        </a>
-                        <a href="#" class="_dm-boxbg__thumb ratio ratio-16x9">
-                            <img class="img-responsive" src="assets/premium/boxed-bg/polygon/thumbs/12.jpg" alt="Background Image" loading="lazy">
-                        </a>
-                        <a href="#" class="_dm-boxbg__thumb ratio ratio-16x9">
-                            <img class="img-responsive" src="assets/premium/boxed-bg/polygon/thumbs/13.jpg" alt="Background Image" loading="lazy">
-                        </a>
-                        <a href="#" class="_dm-boxbg__thumb ratio ratio-16x9">
-                            <img class="img-responsive" src="assets/premium/boxed-bg/polygon/thumbs/14.jpg" alt="Background Image" loading="lazy">
-                        </a>
-                        <a href="#" class="_dm-boxbg__thumb ratio ratio-16x9">
-                            <img class="img-responsive" src="assets/premium/boxed-bg/polygon/thumbs/15.jpg" alt="Background Image" loading="lazy">
-                        </a>
-                        <a href="#" class="_dm-boxbg__thumb ratio ratio-16x9">
-                            <img class="img-responsive" src="assets/premium/boxed-bg/polygon/thumbs/16.jpg" alt="Background Image" loading="lazy">
-                        </a>
-                    </div>
-                </div>
-                <!-- End - Polygon Background Images -->
-
-                <!-- Abstract Background Images -->
-                <div class="col-lg-4">
-                    <h5 class="mb-4">Abstract</h5>
-                    <div class="_dm-boxbg__img-container d-flex flex-wrap">
-                        <a href="#" class="_dm-boxbg__thumb ratio ratio-16x9">
-                            <img class="img-responsive" src="assets/premium/boxed-bg/abstract/thumbs/1.jpg" alt="Background Image" loading="lazy">
-                        </a>
-                        <a href="#" class="_dm-boxbg__thumb ratio ratio-16x9">
-                            <img class="img-responsive" src="assets/premium/boxed-bg/abstract/thumbs/2.jpg" alt="Background Image" loading="lazy">
-                        </a>
-                        <a href="#" class="_dm-boxbg__thumb ratio ratio-16x9">
-                            <img class="img-responsive" src="assets/premium/boxed-bg/abstract/thumbs/3.jpg" alt="Background Image" loading="lazy">
-                        </a>
-                        <a href="#" class="_dm-boxbg__thumb ratio ratio-16x9">
-                            <img class="img-responsive" src="assets/premium/boxed-bg/abstract/thumbs/4.jpg" alt="Background Image" loading="lazy">
-                        </a>
-                        <a href="#" class="_dm-boxbg__thumb ratio ratio-16x9">
-                            <img class="img-responsive" src="assets/premium/boxed-bg/abstract/thumbs/5.jpg" alt="Background Image" loading="lazy">
-                        </a>
-                        <a href="#" class="_dm-boxbg__thumb ratio ratio-16x9">
-                            <img class="img-responsive" src="assets/premium/boxed-bg/abstract/thumbs/6.jpg" alt="Background Image" loading="lazy">
-                        </a>
-                        <a href="#" class="_dm-boxbg__thumb ratio ratio-16x9">
-                            <img class="img-responsive" src="assets/premium/boxed-bg/abstract/thumbs/7.jpg" alt="Background Image" loading="lazy">
-                        </a>
-                        <a href="#" class="_dm-boxbg__thumb ratio ratio-16x9">
-                            <img class="img-responsive" src="assets/premium/boxed-bg/abstract/thumbs/8.jpg" alt="Background Image" loading="lazy">
-                        </a>
-                        <a href="#" class="_dm-boxbg__thumb ratio ratio-16x9">
-                            <img class="img-responsive" src="assets/premium/boxed-bg/abstract/thumbs/9.jpg" alt="Background Image" loading="lazy">
-                        </a>
-                        <a href="#" class="_dm-boxbg__thumb ratio ratio-16x9">
-                            <img class="img-responsive" src="assets/premium/boxed-bg/abstract/thumbs/10.jpg" alt="Background Image" loading="lazy">
-                        </a>
-                        <a href="#" class="_dm-boxbg__thumb ratio ratio-16x9">
-                            <img class="img-responsive" src="assets/premium/boxed-bg/abstract/thumbs/11.jpg" alt="Background Image" loading="lazy">
-                        </a>
-                        <a href="#" class="_dm-boxbg__thumb ratio ratio-16x9">
-                            <img class="img-responsive" src="assets/premium/boxed-bg/abstract/thumbs/12.jpg" alt="Background Image" loading="lazy">
-                        </a>
-                        <a href="#" class="_dm-boxbg__thumb ratio ratio-16x9">
-                            <img class="img-responsive" src="assets/premium/boxed-bg/abstract/thumbs/13.jpg" alt="Background Image" loading="lazy">
-                        </a>
-                        <a href="#" class="_dm-boxbg__thumb ratio ratio-16x9">
-                            <img class="img-responsive" src="assets/premium/boxed-bg/abstract/thumbs/14.jpg" alt="Background Image" loading="lazy">
-                        </a>
-                        <a href="#" class="_dm-boxbg__thumb ratio ratio-16x9">
-                            <img class="img-responsive" src="assets/premium/boxed-bg/abstract/thumbs/15.jpg" alt="Background Image" loading="lazy">
-                        </a>
-                        <a href="#" class="_dm-boxbg__thumb ratio ratio-16x9">
-                            <img class="img-responsive" src="assets/premium/boxed-bg/abstract/thumbs/16.jpg" alt="Background Image" loading="lazy">
-                        </a>
-                    </div>
-                </div>
-                <!-- End - Abstract Background Images -->
-
-            </div>
-            <!-- End - Collection Of Images -->
-
-        </div>
-    </div>
-    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-    <!-- END - BOXED LAYOUT : BACKGROUND IMAGES CONTENT [ DEMO ] -->
-
-    <!-- SETTINGS CONTAINER [ DEMO ] -->
-    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-    <div id="_dm-settingsContainer" class="_dm-setting-container offcanvas offcanvas-end rounded-start" tabindex="-1">
-        {{-- <button id="_dm-settingsToggler" class="_dm-btn-settings btn btn-sm btn-dark p-2 rounded-0 rounded-start shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#_dm-settingsContainer" aria-label="Customization button" aria-controls="_dm-settingsContainer">
-            <i class="demo-psi-gear fs-1"></i>
-        </button> --}}
-
-        <div class="offcanvas-body py-0">
-            <div class="_dm-setting-container__content row">
-                <div class="col-lg-3 p-4">
-
-                    <h5 class="fw-bold pb-3 mb-2">Layouts</h5>
-
-                    <!-- OPTION : Centered Layout -->
-                    <h6 class="mb-2 pb-1">Layouts</h6>
-                    <div class="d-flex align-items-center pt-1 mb-2">
-                        <label class="form-check-label flex-fill" for="_dm-fluidLayoutRadio">Fluid Layout</label>
-                        <div class="form-check form-switch">
-                            <input id="_dm-fluidLayoutRadio" class="form-check-input ms-0" type="radio" name="settingLayouts" autocomplete="off" checked>
-                        </div>
-                    </div>
-
-                    <!-- OPTION : Boxed layout -->
-                    <div class="d-flex align-items-center pt-1 mb-2">
-                        <label class="form-check-label flex-fill" for="_dm-boxedLayoutRadio">Boxed Layout</label>
-                        <div class="form-check form-switch">
-                            <input id="_dm-boxedLayoutRadio" class="form-check-input ms-0" type="radio" name="settingLayouts" autocomplete="off">
-                        </div>
-                    </div>
-
-                    <!-- OPTION : Boxed layout with background images -->
-                    <div id="_dm-boxedBgOption" class="opacity-50 d-flex align-items-center pt-1 mb-2">
-                        <label class="form-label flex-fill mb-0">Background for boxed</label>
-                        <button id="_dm-boxedBgBtn" class="btn btn-icon btn-primary btn-xs" type="button" data-bs-toggle="offcanvas" data-bs-target="#_dm-boxedBgContent" disabled>
-                            <i class="demo-psi-dot-horizontal"></i>
-                        </button>
-                    </div>
-
-                    <!-- OPTION : Centered Layout -->
-                    <div class="d-flex align-items-start pt-1 mb-2">
-                        <label class="form-check-label flex-fill text-nowrap" for="_dm-centeredLayoutRadio">Centered Layout <br><span class="badge bg-danger">New in v.3.0</span></label>
-                        <div class="form-check form-switch">
-                            <input id="_dm-centeredLayoutRadio" class="form-check-input ms-0" type="radio" name="settingLayouts" autocomplete="off">
-                        </div>
-                    </div>
-
-                    <!-- OPTION : Transition timing -->
-                    <h6 class="mt-4 mb-2 py-1">Transitions</h6>
-                    <div class="d-flex align-items-center pt-1 mb-2">
-                        <select id="_dm-transtiionSelect" class="form-select" aria-label="select transition timing">
-                            <option value="in-quart">In Quart</option>
-                            <option value="out-quart">Out Quart</option>
-                            <option value="in-back">In Back</option>
-                            <option value="out-back">Out Back</option>
-                            <option value="in-out-back" selected="true">In Out Back</option>
-                            <option value="steps">Steps</option>
-                            <option value="jumping">Jumping</option>
-                            <option value="rubber">Rubber</option>
-                        </select>
-                    </div>
-
-                    <!-- OPTION : Sticky Header -->
-                    <h6 class="mt-4 mb-2 py-1">Header</h6>
-                    <div class="d-flex align-items-center pt-1 mb-2">
-                        <label class="form-check-label flex-fill" for="_dm-stickyHeaderCheckbox">Sticky header</label>
-                        <div class="form-check form-switch">
-                            <input id="_dm-stickyHeaderCheckbox" class="form-check-input ms-0" type="checkbox" autocomplete="off">
-                        </div>
-                    </div>
-
-                    <!-- OPTION : Additional Offcanvas -->
-                    <h6 class="mt-4 mb-2 py-1">Additional Offcanvas <span class="badge bg-danger">New in BS v.5.0</span></h6>
-                    <p>Select the offcanvas placement.</p>
-                    <div class="text-nowrap">
-                        <button type="button" class="_dm-offcanvasBtn btn btn-sm btn-primary" value="offcanvas-top">Top</button>
-                        <button type="button" class="_dm-offcanvasBtn btn btn-sm btn-primary" value="offcanvas-end">Right</button>
-                        <button type="button" class="_dm-offcanvasBtn btn btn-sm btn-primary" value="offcanvas-bottom">Btm</button>
-                        <button type="button" class="_dm-offcanvasBtn btn btn-sm btn-primary" value="offcanvas-start">Left</button>
-                    </div>
-
-                </div>
-                <div class="col-lg-3 p-4 bg-gray-300">
-
-                    <h5 class="fw-bold pb-3 mb-2">Sidebars</h5>
-
-                    <!-- OPTION : Sticky Navigation -->
-                    <h6 class="mb-2 pb-1">Navigation</h6>
-                    <div class="d-flex align-items-center pt-1 mb-2">
-                        <label class="form-check-label flex-fill" for="_dm-stickyNavCheckbox">Sticky navigation</label>
-                        <div class="form-check form-switch">
-                            <input id="_dm-stickyNavCheckbox" class="form-check-input ms-0" type="checkbox" autocomplete="off">
-                        </div>
-                    </div>
-
-                    <!-- OPTION : Navigation Profile Widget -->
-                    <div class="d-flex align-items-center pt-1 mb-2">
-                        <label class="form-check-label flex-fill" for="_dm-profileWidgetCheckbox">Widget Profile</label>
-                        <div class="form-check form-switch">
-                            <input id="_dm-profileWidgetCheckbox" class="form-check-input ms-0" type="checkbox" autocomplete="off" checked>
-                        </div>
-                    </div>
-
-                    <!-- OPTION : Mini navigation mode -->
-                    <div class="d-flex align-items-center pt-3 mb-2">
-                        <label class="form-check-label flex-fill" for="_dm-miniNavRadio">Min / Collapsed Mode</label>
-                        <div class="form-check form-switch">
-                            <input id="_dm-miniNavRadio" class="form-check-input ms-0" type="radio" name="navigation-mode" autocomplete="off">
-                        </div>
-                    </div>
-
-                    <!-- OPTION : Maxi navigation mode -->
-                    <div class="d-flex align-items-center pt-1 mb-2">
-                        <label class="form-check-label flex-fill" for="_dm-maxiNavRadio">Max / Expanded Mode</label>
-                        <div class="form-check form-switch">
-                            <input id="_dm-maxiNavRadio" class="form-check-input ms-0" type="radio" name="navigation-mode" autocomplete="off" checked>
-                        </div>
-                    </div>
-
-                    <!-- OPTION : Push navigation mode -->
-                    <div class="d-flex align-items-center pt-1 mb-2">
-                        <label class="form-check-label flex-fill" for="_dm-pushNavRadio">Push Mode</label>
-                        <div class="form-check form-switch">
-                            <input id="_dm-pushNavRadio" class="form-check-input ms-0" type="radio" name="navigation-mode" autocomplete="off">
-                        </div>
-                    </div>
-
-                    <!-- OPTION : Slide on top navigation mode -->
-                    <div class="d-flex align-items-center pt-1 mb-2">
-                        <label class="form-check-label flex-fill" for="_dm-slideNavRadio">Slide on top (default)</label>
-                        <div class="form-check form-switch">
-                            <input id="_dm-slideNavRadio" class="form-check-input ms-0" type="radio" name="navigation-mode" autocomplete="off">
-                        </div>
-                    </div>
-
-                    <!-- OPTION : Slide on top navigation mode -->
-                    <div class="d-flex align-items-center pt-1 mb-2">
-                        <label class="form-check-label flex-fill" for="_dm-revealNavRadio">Reveal Mode</label>
-                        <div class="form-check form-switch">
-                            <input id="_dm-revealNavRadio" class="form-check-input ms-0" type="radio" name="navigation-mode" autocomplete="off">
-                        </div>
-                    </div>
-
-                    <h6 class="mt-4 mb-2 py-1">Right sidebar</h6>
-
-                    <!-- OPTION : Disable sidebar backdrop -->
-                    <div class="d-flex align-items-center pt-1 mb-2">
-                        <label class="form-check-label flex-fill" for="_dm-disableBackdropCheckbox">Disable backdrop</label>
-                        <div class="form-check form-switch">
-                            <input id="_dm-disableBackdropCheckbox" class="form-check-input ms-0" type="checkbox" autocomplete="off">
-                        </div>
-                    </div>
-
-                    <!-- OPTION : Static position -->
-                    <div class="d-flex align-items-center pt-1 mb-2">
-                        <label class="form-check-label flex-fill" for="_dm-staticSidebarCheckbox">Static position</label>
-                        <div class="form-check form-switch">
-                            <input id="_dm-staticSidebarCheckbox" class="form-check-input ms-0" type="checkbox" autocomplete="off">
-                        </div>
-                    </div>
-
-                    <!-- OPTION : Stuck sidebar -->
-                    <div class="d-flex align-items-center pt-1 mb-2">
-                        <label class="form-check-label flex-fill" for="_dm-stuckSidebarCheckbox">Stuck Sidebar </label>
-                        <div class="form-check form-switch">
-                            <input id="_dm-stuckSidebarCheckbox" class="form-check-input ms-0" type="checkbox" autocomplete="off">
-                        </div>
-                    </div>
-
-                    <!-- OPTION : Unite Sidebar -->
-                    <div class="d-flex align-items-center pt-1 mb-2">
-                        <label class="form-check-label flex-fill" for="_dm-uniteSidebarCheckbox">Unite Sidebar</label>
-                        <div class="form-check form-switch">
-                            <input id="_dm-uniteSidebarCheckbox" class="form-check-input ms-0" type="checkbox" autocomplete="off">
-                        </div>
-                    </div>
-
-                    <!-- OPTION : Pinned Sidebar -->
-                    <div class="d-flex align-items-start pt-1 mb-2">
-                        <label class="form-check-label flex-fill" for="_dm-pinnedSidebarCheckbox">Pinned Sidebar <span class="badge bg-danger">New in v3.0</span></label>
-                        <div class="form-check form-switch">
-                            <input id="_dm-pinnedSidebarCheckbox" class="form-check-input ms-0" type="checkbox" autocomplete="off">
-                        </div>
-                    </div>
-
-                </div>
-                <div id="dm_colorSchemesContainer" class="col-lg-6 p-4">
-                    <h5 class="fw-bold pb-3 mb-2">Color Schemes</h5>
-
-                    <div class="row mb-3 pb-3">
-                        <div class="col-md-6">
-
-                            <div class="d-flex align-items-start position-relative">
-                                <div class="flex-shrink-0 me-3">
-                                    <div class="_dm-color-box bg-light"></div>
-                                </div>
-                                <div class="flex-grow-1 ">
-                                    <a href="#" data-dir="light" data-single="true" class="_dm-themeColors schemes-btn h6 d-block mb-0 stretched-link text-decoration-none">Light</a>
-                                    <small class="text-muted">Completely bright color themes.</small>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="col-md-6">
-
-                            <div class="d-flex align-items-start position-relative">
-                                <div class="flex-shrink-0 me-3">
-                                    <div class="_dm-color-box bg-dark"></div>
-                                </div>
-                                <div class="flex-grow-1 ">
-                                    <a href="#" data-dir="dark" data-hd="expanded" class="_dm-themeColors schemes-btn h6 d-block mb-0 stretched-link text-decoration-none">Dark</a>
-                                    <small class="text-muted">Completely dark color themes.</small>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="row text-center my-3">
-
-                        <!-- Expanded Header -->
-                        <div class="col-md-4">
-                            <h6 class="m-0">Expanded Header</h6>
-                            <div class="_dm-colorShcemesMode">
-
-                                <!-- Scheme Button -->
-                                <button type="button" class="btn shadow-none">
-                                    <img src="{{url('assets/img/color-schemes/expanded-header.png')}}" alt="color scheme illusttration" loading="lazy">
-                                </button>
-
-                                <!-- Scheme Colors -->
-                                <div class="_dm-colorSchemesMode__colors">
-                                    <div class="d-flex flex-wrap justify-content-center">
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-gray" type="button" data-dir="all-headers/gray" data-hd="expanded"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-navy active" type="button" data-dir="all-headers/navy" data-hd="expanded"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-ocean" type="button" data-dir="all-headers/ocean" data-hd="expanded"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-lime" type="button" data-dir="all-headers/lime" data-hd="expanded"></button>
-
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-violet" type="button" data-dir="all-headers/violet" data-hd="expanded"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-orange" type="button" data-dir="all-headers/orange" data-hd="expanded"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-teal" type="button" data-dir="all-headers/teal" data-hd="expanded"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-corn" type="button" data-dir="all-headers/corn" data-hd="expanded"></button>
-
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-cherry" type="button" data-dir="all-headers/cherry" data-hd="expanded"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-coffee" type="button" data-dir="all-headers/coffee" data-hd="expanded"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-pear" type="button" data-dir="all-headers/pear" data-hd="expanded"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-night" type="button" data-dir="all-headers/night" data-hd="expanded"></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Fair Header -->
-                        <div class="col-md-4">
-                            <h6 class="m-0">Fair Header</h6>
-                            <div class="_dm-colorShcemesMode">
-
-                                <!-- Scheme Button -->
-                                <button type="button" class="btn shadow-none">
-                                    <img src="{{url('assets/img/color-schemes/fair-header.png')}}" alt="color scheme illusttration" loading="lazy">
-                                </button>
-
-                                <!-- Scheme Colors -->
-                                <div class="_dm-colorSchemesMode__colors">
-                                    <div class="d-flex flex-wrap justify-content-center">
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-gray" type="button" data-dir="all-headers/gray" data-hd="fair"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-navy" type="button" data-dir="" data-hd="fair"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-ocean" type="button" data-dir="all-headers/ocean" data-hd="fair"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-lime" type="button" data-dir="all-headers/lime" data-hd="fair"></button>
-
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-violet" type="button" data-dir="all-headers/violet" data-hd="fair"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-orange" type="button" data-dir="all-headers/orange" data-hd="fair"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-teal" type="button" data-dir="all-headers/teal" data-hd="fair"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-corn" type="button" data-dir="all-headers/corn" data-hd="fair"></button>
-
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-cherry" type="button" data-dir="all-headers/cherry" data-hd="fair"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-coffee" type="button" data-dir="all-headers/coffee" data-hd="fair"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-pear" type="button" data-dir="all-headers/pear" data-hd="fair"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-night" type="button" data-dir="all-headers/night" data-hd="fair"></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <h6 class="m-0">Full Header</h6>
-
-                            <div class="_dm-colorShcemesMode">
-
-                                <!-- Scheme Button -->
-                                <button type="button" class="btn shadow-none">
-                                    <img src="{{url('assets/img/color-schemes/full-header.png')}}" alt="color scheme illusttration" loading="lazy">
-                                </button>
-
-                                <!-- Scheme Colors -->
-                                <div class="_dm-colorSchemesMode__colors">
-                                    <div class="d-flex flex-wrap justify-content-center">
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-gray" type="button" data-dir="all-headers/gray"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-navy" type="button" data-dir=""></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-ocean" type="button" data-dir="all-headers/ocean"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-lime" type="button" data-dir="all-headers/lime"></button>
-
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-violet" type="button" data-dir="all-headers/violet"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-orange" type="button" data-dir="all-headers/orange"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-teal" type="button" data-dir="all-headers/teal"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-corn" type="button" data-dir="all-headers/corn"></button>
-
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-cherry" type="button" data-dir="all-headers/cherry"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-coffee" type="button" data-dir="all-headers/coffee"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-pear" type="button" data-dir="all-headers/pear"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-night" type="button" data-dir="all-headers/night"></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row text-center mb-3">
-                        <div class="col-md-4">
-                            <h6 class="m-0">Primary Nav</h6>
-
-                            <div class="_dm-colorShcemesMode">
-
-                                <!-- Scheme Button -->
-                                <button type="button" class="btn shadow-none">
-                                    <img src="{{url('assets/img/color-schemes/navigation.png')}}" alt="color scheme illusttration" loading="lazy">
-                                </button>
-
-                                <!-- Scheme Colors -->
-                                <div class="_dm-colorSchemesMode__colors">
-                                    <div class="d-flex flex-wrap justify-content-center">
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-gray" type="button" data-dir="primary-nav/gray" data-hd="fair"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-navy" type="button" data-dir="primary-nav/navy" data-hd="fair"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-ocean" type="button" data-dir="primary-nav/ocean" data-hd="fair"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-lime" type="button" data-dir="primary-nav/lime" data-hd="fair"></button>
-
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-violet" type="button" data-dir="primary-nav/violet" data-hd="fair"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-orange" type="button" data-dir="primary-nav/orange" data-hd="fair"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-teal" type="button" data-dir="primary-nav/teal" data-hd="fair"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-corn" type="button" data-dir="primary-nav/corn" data-hd="fair"></button>
-
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-cherry" type="button" data-dir="primary-nav/cherry" data-hd="fair"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-coffee" type="button" data-dir="primary-nav/coffee" data-hd="fair"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-pear" type="button" data-dir="primary-nav/pear" data-hd="fair"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-night" type="button" data-dir="primary-nav/night" data-hd="fair"></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <h6 class="m-0">Brand</h6>
-
-                            <div class="_dm-colorShcemesMode">
-
-                                <!-- Scheme Button -->
-                                <button type="button" class="btn shadow-none">
-                                    <img src="{{url('assets/img/color-schemes/brand.png')}}" alt="color scheme illusttration" loading="lazy">
-                                </button>
-
-                                <!-- Scheme Colors -->
-                                <div class="_dm-colorSchemesMode__colors">
-                                    <div class="d-flex flex-wrap justify-content-center">
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-gray" type="button" data-dir="brand/gray"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-navy" type="button" data-dir="brand/navy"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-ocean" type="button" data-dir="brand/ocean"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-lime" type="button" data-dir="brand/lime"></button>
-
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-violet" type="button" data-dir="brand/violet"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-orange" type="button" data-dir="brand/orange"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-teal" type="button" data-dir="brand/teal"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-corn" type="button" data-dir="brand/corn"></button>
-
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-cherry" type="button" data-dir="brand/cherry"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-coffee" type="button" data-dir="brand/coffee"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-pear" type="button" data-dir="brand/pear"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-night" type="button" data-dir="brand/night"></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <h6 class="m-0">Tall Header <span class="badge bg-danger">New in v3.0</span></h6>
-                            <div class="_dm-colorShcemesMode">
-
-                                <!-- Scheme Button -->
-                                <button type="button" class="btn shadow-none">
-                                    <img src="{{url('assets/img/color-schemes/tall-header.png')}}" alt="color scheme illusttration" loading="lazy">
-                                </button>
-
-                                <!-- Scheme Colors -->
-                                <div class="_dm-colorSchemesMode__colors">
-                                    <div class="d-flex flex-wrap justify-content-center">
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-gray" type="button" data-dir="all-headers/gray" data-hd="fair,expanded,border"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-navy" type="button" data-dir="" data-hd="fair,expanded,border"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-ocean" type="button" data-dir="all-headers/ocean" data-hd="fair,expanded,border"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-lime" type="button" data-dir="all-headers/lime" data-hd="fair,expanded,border"></button>
-
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-violet" type="button" data-dir="all-headers/violet" data-hd="fair,expanded,border"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-orange" type="button" data-dir="all-headers/orange" data-hd="fair,expanded,border"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-teal" type="button" data-dir="all-headers/teal" data-hd="fair,expanded,border"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-corn" type="button" data-dir="all-headers/corn" data-hd="fair,expanded,border"></button>
-
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-cherry" type="button" data-dir="all-headers/cherry" data-hd="fair,expanded,border"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-coffee" type="button" data-dir="all-headers/coffee" data-hd="fair,expanded,border"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-pear" type="button" data-dir="all-headers/pear" data-hd="fair,expanded,border"></button>
-                                        <button class="_dm-themeColors _dm-box-xs _dm-bg-night" type="button" data-dir="all-headers/night" data-hd="fair,expanded,border"></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <h5 class="mt-5 fw-bold">Scrollbars</h5>
-                    <p>Hides native scrollbars and creates custom styleable overlay scrollbars.</p>
-                    <div class="row">
-                        <div class="col-5">
-
-                            <!-- OPTION : Apply the OverlayScrollBar to the body. -->
-                            <div class="d-flex align-items-center pt-1 mb-2">
-                                <label class="form-check-label flex-fill" for="_dm-bodyScrollbarCheckbox">Body scrollbar</label>
-                                <div class="form-check form-switch">
-                                    <input id="_dm-bodyScrollbarCheckbox" class="form-check-input ms-0" type="checkbox" autocomplete="off">
-                                </div>
-                            </div>
-
-                            <!-- OPTION : Apply the OverlayScrollBar to content containing class .scrollable-content. -->
-                            <div class="d-flex align-items-center pt-1 mb-2">
-                                <label class="form-check-label flex-fill" for="_dm-sidebarsScrollbarCheckbox">Navigation and Sidebar</label>
-                                <div class="form-check form-switch">
-                                    <input id="_dm-sidebarsScrollbarCheckbox" class="form-check-input ms-0" type="checkbox" autocomplete="off">
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="col-7">
-
-                            <div class="alert alert-warning" role="alert">
-                                Please consider the performance impact of using any scrollbar plugin.
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-    <!-- END - SETTINGS CONTAINER [ DEMO ] -->
-
-    <!-- OFFCANVAS [ DEMO ] -->
-    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-    <div id="_dm-offcanvas" class="offcanvas" tabindex="-1">
-
-        <!-- Offcanvas header -->
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title">Offcanvas Header</h5>
-            <button type="button" class="btn-close btn-lg text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-
-        <!-- Offcanvas content -->
-        <div class="offcanvas-body">
-            <h5>Content Here</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente eos nihil earum aliquam quod in dolor, aspernatur obcaecati et at. Dicta, ipsum aut, fugit nam dolore porro non est totam sapiente animi recusandae obcaecati dolorum, rem ullam cumque. Illum quidem reiciendis autem neque excepturi odit est accusantium, facilis provident molestias, dicta obcaecati itaque ducimus fuga iure in distinctio voluptate nesciunt dignissimos rem error a. Expedita officiis nam dolore dolores ea. Soluta repellendus delectus culpa quo. Ea tenetur impedit error quod exercitationem ut ad provident quisquam omnis! Nostrum quasi ex delectus vero, facilis aut recusandae deleniti beatae. Qui velit commodi inventore.</p>
-        </div>
-
-    </div>
-    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-    <!-- END - OFFCANVAS [ DEMO ] -->
-
     <!-- JAVASCRIPTS -->
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
     <!-- Bootstrap JS [ OPTIONAL ] -->
-    {{-- <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/bootstrap.min.bdf649e4bf3fa0261445f7c2ed3517c3f300c9bb44cb991c504bdc130a6ead19.js" defer></script> --}}
-
+    <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/bootstrap.min.bdf649e4bf3fa0261445f7c2ed3517c3f300c9bb44cb991c504bdc130a6ead19.js" defer></script>
     <!-- Nifty JS [ OPTIONAL ] -->
-    {{-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script> --}}
-    {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> --}}
-    <script src="{{url('assets/js/bootstrap.min.bdf649e4bf3fa0261445f7c2ed3517c3f300c9bb44cb991c504bdc130a6ead19.js')}}" defer></script>
-    <script src="{{url('assets/js/nifty.min.b53472f123acc27ffd0c586e4ca3dc5d83c0670a3a5e120f766f88a92240f57b.js')}}" defer></script>
-    <script>
-        // document.querySelectorAll(".nav-link").forEach((link) => {
-        //     if (link.href === window.location.href) {
-        //         link.classList.add("active");
-        //         link.setAttribute("aria-current", "page");
-        //     }
-        // });
-        // var header = document.getElementById("myMenu");
-
-        // var btns = header.getElementsByClassName("btn");
-        //     for (var i = 0; i < btns.length; i++) {
-        //     btns[i].addEventListener("click", function() {
-        //     var current = document.getElementsByClassName("active");
-        //     current[0].className = current[0].className.replace(" active", "");
-        //     this.className += " active";
-        //     });
-        // }
-    </script>
+    <script src="assets/js/nifty.min.b53472f123acc27ffd0c586e4ca3dc5d83c0670a3a5e120f766f88a92240f57b.js" defer></script>
     <!-- Plugin scripts [ OPTIONAL ] -->
-    
+    <script src="assets/pages/dashboard-1.min.07239cfbfa13a684f5c4668d5282cf217c7793bc57557b4ec22c36740ffb5bf1.js" defer></script>
 
 </body>
 </html>
